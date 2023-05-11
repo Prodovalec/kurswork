@@ -1,5 +1,4 @@
 #include "NODE.h"
-#include <fstream>
 
 NODE::NODE()
 {
@@ -273,7 +272,7 @@ void create_student(ptrNODE& head)
 	data.record_book = InputInt();
 	if (data.record_book / 1000 != data.admision_year && to_string(data.record_book).length() != 7)
 		throw "Некорректный ввод зачётной книжки!";
-	std::cout << "Пол (true - муж, false - жен): ";
+	std::cout << "Пол: ";
 	string sex = InputString();
 	(sex.find('муж') != string::npos) ?data.sex = 1: data.sex = 0;
 	std::cout << "Введите количество семестров: ";
